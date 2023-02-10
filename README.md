@@ -35,10 +35,13 @@ The MechaCar suspension coils do not meet the specifications to remain under 100
 
 ## T-Test on Suspension Coils
 
+* T-Test on Lot 1
 ![t-test Lot1](https://user-images.githubusercontent.com/115502048/218184277-c1aa5d10-c2a9-4325-9cdd-0594fb432216.png)
 
+* T-Test on Lot 2
 ![t-test Lot2](https://user-images.githubusercontent.com/115502048/218184314-1780892f-e39b-4baa-af99-cda4870c090c.png)
 
+* T-Test on Lot 3
 ![t-test Lot3](https://user-images.githubusercontent.com/115502048/218184343-0b1984f9-9ff1-4da0-8559-e8289481e8b0.png)
 
 The only manufacturing lot where the null hypothesis should be rejected is Lot3 where the 
