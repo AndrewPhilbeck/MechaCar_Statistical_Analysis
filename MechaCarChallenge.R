@@ -18,4 +18,4 @@ suspension_data <- read.csv('Suspension_Coil.csv')
 total_summary <- summarize(suspension_data, mean(PSI), median(PSI), var(PSI), sd(PSI))
 total_summary
 lot_summary <- suspension_data %>% group_by(Manufacturing_Lot)  %>%
-  summarise(total_summary)
+  summarize(mean(PSI), median(PSI), var(PSI), sd(PSI))
