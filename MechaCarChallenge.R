@@ -9,3 +9,13 @@ head(df)
 # and add the dataframe you created in Step 4 as the data parameter.
 mpg_reg <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=df)
 summary(mpg_reg)
+
+# import and read in the Suspension_Coil.csv
+suspension_data <- read.csv('Suspension_Coil.csv')
+# Write an RScript that creates a total_summary dataframe
+# using the summarize() function to get the mean, median, variance,
+# and standard deviation of the suspension coil’s PSI column.
+total_summary <- summarize(suspension_data, mean(PSI), median(PSI), var(PSI), sd(PSI))
+total_summary
+lot_summary <- suspension_data %>% group_by(Manufacturing_Lot)  %>%
+  summarise(total_summary)
