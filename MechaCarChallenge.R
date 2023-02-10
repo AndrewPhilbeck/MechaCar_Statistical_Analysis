@@ -19,3 +19,14 @@ total_summary <- summarize(suspension_data, mean(PSI), median(PSI), var(PSI), sd
 total_summary
 lot_summary <- suspension_data %>% group_by(Manufacturing_Lot)  %>%
   summarize(mean(PSI), median(PSI), var(PSI), sd(PSI))
+?t.test()
+# One sample t-test
+t.test(suspension_data$PSI, mu=1500)
+# t-test with subsets
+lot_1 = subset(suspension_data, Manufacturing_Lot=="Lot1")
+lot_2 = subset(suspension_data, Manufacturing_Lot=="Lot2")
+lot_3 = subset(suspension_data, Manufacturing_Lot=="Lot3")
+# three more t-tests using subsets
+t.test(subset(suspension_data, Manufacturing_Lot=="Lot1")$PSI, mu = 1500)
+t.test(subset(suspension_data, Manufacturing_Lot=="Lot2")$PSI, mu = 1500)
+t.test(subset(suspension_data, Manufacturing_Lot=="Lot3")$PSI, mu = 1500)
